@@ -1,0 +1,45 @@
+{
+  "name": "dnd4e-to-json",
+  "version": "0.0.0",
+  "dependencies": {
+    "angular": "1.6.4",
+    "angular-animate": "1.6.4",
+    "angular-aria": "1.6.4",
+    "angular-bootstrap": "2.5.0",
+    "angular-cookies": "1.6.4",
+    "angular-ellipsis": "0.1.7",
+    "angular-messages": "1.6.4",
+    "angular-resource": "1.6.4",
+    "angular-route": "1.6.4",
+    "angular-sanitize": "1.6.4",
+    "angular-touch": "1.6.4",
+    "angular-ui-event": "1.0.0",
+    "angular-ui-router": "1.0.4",
+    "angular-ui-sortable": "0.17.1",
+    "animate.css": "3.5.2",
+    "bootstrap": "3.3.7",
+    "font-awesome": "^4.7.0",
+    "jquery": "3.2.1",
+    "jquery-ui": "1.12.1",
+    "moment": "2.18.1",
+    "moment-timezone": "0.5.13",
+    "numeral": "2.0.6",
+    "underscore": "1.8.3",
+    "ng-file-upload": "12.2.13",
+    "xml2js": "^0.4.16"
+  },
+  "devDependencies": {
+    "angular-mocks": "1.4.0"
+  },
+  "appPath": "app",
+  "moduleName": "dnd4eToJsonApp",
+  "overrides": {
+    "bootstrap": {
+      "main": [
+        "less/bootstrap.less",
+        "dist/css/bootstrap.css",
+        "dist/js/bootstrap.js"
+      ]
+    }
+  }
+}

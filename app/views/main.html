@@ -1,0 +1,717 @@
+<div class="row">
+
+    <div class=" col-sm-4" ng-show="value" ng-repeat="(key, value) in details">
+        <p class="">
+            <div style="border-bottom: 1px solid #CCCCCC;width: calc(100% - 10px);">{{value}}&nbsp;</div>
+            <small>{{key}}</small>
+            <!-- <span class="label label-default" ng-class="{'label-info': value}">{{key}}</span> -->
+        </p>
+    </div>
+</div>
+
+<div class="row">
+    <div class="col-xs-6">
+        <table class="table">
+            <thead>
+                <th>Defense</th>
+                <th>Score</th>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>Armor Class</td>
+                    <td>{{stats['AC']}}</td>
+                </tr>
+                <tr>
+                    <td>Fortitude Defense</td>
+                    <td>{{stats['Fortitude Defense']}}</td>
+                </tr>
+                <tr>
+                    <td>Reflex Defense</td>
+                    <td>{{stats['Reflex Defense']}}</td>
+                </tr>
+                <tr>
+                    <td>Will Defense</td>
+                    <td>{{stats['Will Defense']}}</td>
+                </tr>
+            </tbody>
+        </table>
+        <table class="table">
+            <thead>
+                <th>Stat</th>
+                <th>Score</th>
+                <th>Mod</th>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>Strength</td>
+                    <td ng-bind-html="stats['Strength']"></td>
+                    <td>{{stats['Strength modifier']}}</td>
+                </tr>
+                <tr>
+                    <td>Constitution</td>
+                    <td ng-bind-html="stats['Constitution']"></td>
+                    <td>{{stats['Constitution modifier']}}</td>
+                </tr>
+                <tr>
+                    <td>Dexterity</td>
+                    <td ng-bind-html="stats['Dexterity']"></td>
+                    <td>{{stats['Dexterity modifier']}}</td>
+                </tr>
+                <tr>
+                    <td>Intelligence</td>
+                    <td ng-bind-html="stats['Intelligence']"></td>
+                    <td>{{stats['Intelligence modifier']}}</td>
+                </tr>
+                <tr>
+                    <td>Wisdom</td>
+                    <td ng-bind-html="stats['Wisdom']"></td>
+                    <td>{{stats['Wisdom modifier']}}</td>
+                </tr>
+                <tr>
+                    <td>Charisma</td>
+                    <td ng-bind-html="stats['Charisma']"></td>
+                    <td>{{stats['Charisma modifier']}}</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+    <div class="col-xs-6">
+        <table class="table">
+            <thead>
+                <th>Ability</th>
+                <th>Score</th>
+                <th>Trained</th>
+                <th>Misc</th>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>Acrobatics</td>
+                    <td>{{stats['Acrobatics']}}</td>
+
+                    <td>{{stats['Acrobatics Trained']}}</td>
+
+                    <td>{{stats['Acrobatics Misc']}}</td>
+                </tr>
+                <tr>
+                    <td>Athletics</td>
+                    <td>{{stats['Athletics']}}</td>
+
+                    <td>{{stats['Athletics Trained']}}</td>
+
+                    <td>{{stats['Athletics Misc']}}</td>
+                </tr>
+                <tr>
+                    <td>Arcana</td>
+                    <td>{{stats['Arcana']}}</td>
+
+                    <td>{{stats['Arcana Trained']}}</td>
+
+                    <td>{{stats['Arcana Misc']}}</td>
+                </tr>
+                <tr>
+                    <td>Bluff</td>
+                    <td>{{stats['Bluff']}}</td>
+
+                    <td>{{stats['Bluff Trained']}}</td>
+
+                    <td>{{stats['Bluff Misc']}}</td>
+                </tr>
+                <tr>
+                    <td>Diplomacy</td>
+                    <td>{{stats['Diplomacy']}}</td>
+
+                    <td>{{stats['Diplomacy Trained']}}</td>
+
+                    <td>{{stats['Diplomacy Misc']}}</td>
+                </tr>
+                <tr>
+                    <td>Dungeoneering</td>
+                    <td>{{stats['Dungeoneering']}}</td>
+
+                    <td>{{stats['Dungeoneering Trained']}}</td>
+
+                    <td>{{stats['Dungeoneering Misc']}}</td>
+                </tr>
+                <tr>
+                    <td>Endurance</td>
+                    <td>{{stats['Endurance']}}</td>
+
+                    <td>{{stats['Endurance Trained']}}</td>
+
+                    <td>{{stats['Endurance Misc']}}</td>
+                </tr>
+                <tr>
+                    <td>Heal</td>
+                    <td>{{stats['Heal']}}</td>
+
+                    <td>{{stats['Heal Trained']}}</td>
+
+                    <td>{{stats['Heal Misc']}}</td>
+                </tr>
+                <tr>
+                    <td>History</td>
+                    <td>{{stats['History']}}</td>
+
+                    <td>{{stats['History Trained']}}</td>
+
+                    <td>{{stats['History Misc']}}</td>
+                </tr>
+                <tr>
+                    <td>Insight</td>
+                    <td>{{stats['Insight']}}</td>
+
+                    <td>{{stats['Insight Trained']}}</td>
+
+                    <td>{{stats['Insight Misc']}}</td>
+                </tr>
+                <tr>
+                    <td>Intimidate</td>
+                    <td>{{stats['Intimidate']}}</td>
+
+                    <td>{{stats['Intimidate Trained']}}</td>
+
+                    <td>{{stats['Intimidate Misc']}}</td>
+                </tr>
+                <tr>
+                    <td>Nature</td>
+                    <td>{{stats['Nature']}}</td>
+
+                    <td>{{stats['Nature Trained']}}</td>
+
+                    <td>{{stats['Nature Misc']}}</td>
+                </tr>
+                <tr>
+                    <td>Perception</td>
+                    <td>{{stats['Perception']}}</td>
+
+                    <td>{{stats['Perception Trained']}}</td>
+
+                    <td>{{stats['Perception Misc']}}</td>
+                </tr>
+                <tr>
+                    <td>Religion</td>
+                    <td>{{stats['Religion']}}</td>
+
+                    <td>{{stats['Religion Trained']}}</td>
+
+                    <td>{{stats['Religion Misc']}}</td>
+                </tr>
+                <tr>
+                    <td>Stealth</td>
+                    <td>{{stats['Stealth']}}</td>
+
+                    <td>{{stats['Stealth Trained']}}</td>
+
+                    <td>{{stats['Stealth Misc']}}</td>
+                </tr>
+                <tr>
+                    <td>Streetwise</td>
+                    <td>{{stats['Streetwise']}}</td>
+
+                    <td>{{stats['Streetwise Trained']}}</td>
+
+                    <td>{{stats['Streetwise Misc']}}</td>
+                </tr>
+                <tr>
+                    <td>Thievery</td>
+                    <td>{{stats['Thievery']}}</td>
+
+                    <td>{{stats['Thievery Trained']}}</td>
+
+                    <td>{{stats['Thievery Misc']}}</td>
+                </tr>
+            </tbody>
+        </table>
+        <!-- <p>{{value}}</p> -->
+    </div>
+</div>
+
+
+<div class="row">
+    <div class="col-xs-12">
+        <table class="table">
+            <tbody>
+                <!-- <tr>
+                    <td>Strength</td>
+                    <td>{{stats['Strength']}}</td>
+                </tr>
+                <tr>
+                    <td>Constitution</td>
+                    <td>{{stats['Constitution']}}</td>
+                </tr>
+                <tr>
+                    <td>Dexterity</td>
+                    <td>{{stats['Dexterity']}}</td>
+                </tr>
+                <tr>
+                    <td>Intelligence</td>
+                    <td>{{stats['Intelligence']}}</td>
+                </tr>
+                <tr>
+                    <td>Wisdom</td>
+                    <td>{{stats['Wisdom']}}</td>
+                </tr>
+                <tr>
+                    <td>Charisma</td>
+                    <td>{{stats['Charisma']}}</td>
+                </tr>
+                <tr>
+                    <td>Strength modifier</td>
+                    <td>{{stats['Strength modifier']}}</td>
+                </tr>
+                <tr>
+                    <td>Dexterity modifier</td>
+                    <td>{{stats['Dexterity modifier']}}</td>
+                </tr>
+                <tr>
+                    <td>Constitution modifier</td>
+                    <td>{{stats['Constitution modifier']}}</td>
+                </tr>
+                <tr>
+                    <td>Intelligence modifier</td>
+                    <td>{{stats['Intelligence modifier']}}</td>
+                </tr>
+                <tr>
+                    <td>Wisdom modifier</td>
+                    <td>{{stats['Wisdom modifier']}}</td>
+                </tr>
+                <tr>
+                    <td>Charisma modifier</td>
+                    <td>{{stats['Charisma modifier']}}</td>
+                </tr>
+                <tr>
+                    <td>AC</td>
+                    <td>{{stats['AC']}}</td>
+                </tr>
+                <tr>
+                    <td>Fortitude Defense</td>
+                    <td>{{stats['Fortitude Defense']}}</td>
+                </tr>
+                <tr>
+                    <td>Reflex Defense</td>
+                    <td>{{stats['Reflex Defense']}}</td>
+                </tr>
+                <tr>
+                    <td>Will Defense</td>
+                    <td>{{stats['Will Defense']}}</td>
+                </tr> -->
+                <tr>
+                    <td>Death Saves Count</td>
+                    <td>{{stats['Death Saves Count']}}</td>
+                </tr>
+                <tr>
+                    <td>Level</td>
+                    <td>{{stats['Level']}}</td>
+                </tr>
+                <tr>
+                    <td>Hit Points</td>
+                    <td>{{stats['Hit Points']}}</td>
+                </tr>
+                <tr>
+                    <td>_LEVEL-ONE-HPS</td>
+                    <td>{{stats['_LEVEL-ONE-HPS']}}</td>
+                </tr>
+                <tr>
+                    <td>Healing Surges</td>
+                    <td>{{stats['Healing Surges']}}</td>
+                </tr>
+                <tr>
+                    <td>HALF-LEVEL</td>
+                    <td>{{stats['HALF-LEVEL']}}</td>
+                </tr>
+                <tr>
+                    <td>Fortitude Defense Class Bonus</td>
+                    <td>{{stats['Fortitude Defense Class Bonus']}}</td>
+                </tr>
+                <tr>
+                    <td>Reflex Defense Class Bonus</td>
+                    <td>{{stats['Reflex Defense Class Bonus']}}</td>
+                </tr>
+                <tr>
+                    <td>Will Defense Class Bonus</td>
+                    <td>{{stats['Will Defense Class Bonus']}}</td>
+                </tr>
+                <tr>
+                    <td>Initiative</td>
+                    <td>{{stats['Initiative']}}</td>
+                </tr>
+                <tr>
+                    <td>Initiative Misc</td>
+                    <td>{{stats['Initiative Misc']}}</td>
+                </tr>
+                <tr>
+                    <td>Ring Slots</td>
+                    <td>{{stats['Ring Slots']}}</td>
+                </tr>
+                <tr>
+                    <td>_BaseActionPoints</td>
+                    <td>{{stats['_BaseActionPoints']}}</td>
+                </tr>
+                <tr>
+                    <td>XP Needed</td>
+                    <td>{{stats['XP Needed']}}</td>
+                </tr>
+                <tr>
+                    <td>Acrobatics</td>
+                    <td>{{stats['Acrobatics']}}</td>
+                </tr>
+                <tr>
+                    <td>Acrobatics Trained</td>
+                    <td>{{stats['Acrobatics Trained']}}</td>
+                </tr>
+                <tr>
+                    <td>Acrobatics Misc</td>
+                    <td>{{stats['Acrobatics Misc']}}</td>
+                </tr>
+                <tr>
+                    <td>Armor Penalty</td>
+                    <td>{{stats['Armor Penalty']}}</td>
+                </tr>
+                <tr>
+                    <td>Arcana</td>
+                    <td>{{stats['Arcana']}}</td>
+                </tr>
+                <tr>
+                    <td>Arcana Trained</td>
+                    <td>{{stats['Arcana Trained']}}</td>
+                </tr>
+                <tr>
+                    <td>Arcana Misc</td>
+                    <td>{{stats['Arcana Misc']}}</td>
+                </tr>
+                <tr>
+                    <td>Bluff</td>
+                    <td>{{stats['Bluff']}}</td>
+                </tr>
+                <tr>
+                    <td>Bluff Trained</td>
+                    <td>{{stats['Bluff Trained']}}</td>
+                </tr>
+                <tr>
+                    <td>Bluff Misc</td>
+                    <td>{{stats['Bluff Misc']}}</td>
+                </tr>
+                <tr>
+                    <td>Diplomacy</td>
+                    <td>{{stats['Diplomacy']}}</td>
+                </tr>
+                <tr>
+                    <td>Diplomacy Trained</td>
+                    <td>{{stats['Diplomacy Trained']}}</td>
+                </tr>
+                <tr>
+                    <td>Diplomacy Misc</td>
+                    <td>{{stats['Diplomacy Misc']}}</td>
+                </tr>
+                <tr>
+                    <td>Dungeoneering</td>
+                    <td>{{stats['Dungeoneering']}}</td>
+                </tr>
+                <tr>
+                    <td>Dungeoneering Trained</td>
+                    <td>{{stats['Dungeoneering Trained']}}</td>
+                </tr>
+                <tr>
+                    <td>Dungeoneering Misc</td>
+                    <td>{{stats['Dungeoneering Misc']}}</td>
+                </tr>
+                <tr>
+                    <td>Endurance</td>
+                    <td>{{stats['Endurance']}}</td>
+                </tr>
+                <tr>
+                    <td>Endurance Trained</td>
+                    <td>{{stats['Endurance Trained']}}</td>
+                </tr>
+                <tr>
+                    <td>Endurance Misc</td>
+                    <td>{{stats['Endurance Misc']}}</td>
+                </tr>
+                <tr>
+                    <td>Heal</td>
+                    <td>{{stats['Heal']}}</td>
+                </tr>
+                <tr>
+                    <td>Heal Trained</td>
+                    <td>{{stats['Heal Trained']}}</td>
+                </tr>
+                <tr>
+                    <td>Heal Misc</td>
+                    <td>{{stats['Heal Misc']}}</td>
+                </tr>
+                <tr>
+                    <td>History</td>
+                    <td>{{stats['History']}}</td>
+                </tr>
+                <tr>
+                    <td>History Trained</td>
+                    <td>{{stats['History Trained']}}</td>
+                </tr>
+                <tr>
+                    <td>History Misc</td>
+                    <td>{{stats['History Misc']}}</td>
+                </tr>
+                <tr>
+                    <td>Insight</td>
+                    <td>{{stats['Insight']}}</td>
+                </tr>
+                <tr>
+                    <td>Insight Trained</td>
+                    <td>{{stats['Insight Trained']}}</td>
+                </tr>
+                <tr>
+                    <td>Insight Misc</td>
+                    <td>{{stats['Insight Misc']}}</td>
+                </tr>
+                <tr>
+                    <td>Intimidate</td>
+                    <td>{{stats['Intimidate']}}</td>
+                </tr>
+                <tr>
+                    <td>Intimidate Trained</td>
+                    <td>{{stats['Intimidate Trained']}}</td>
+                </tr>
+                <tr>
+                    <td>Intimidate Misc</td>
+                    <td>{{stats['Intimidate Misc']}}</td>
+                </tr>
+                <tr>
+                    <td>Nature</td>
+                    <td>{{stats['Nature']}}</td>
+                </tr>
+                <tr>
+                    <td>Nature Trained</td>
+                    <td>{{stats['Nature Trained']}}</td>
+                </tr>
+                <tr>
+                    <td>Nature Misc</td>
+                    <td>{{stats['Nature Misc']}}</td>
+                </tr>
+                <tr>
+                    <td>Perception</td>
+                    <td>{{stats['Perception']}}</td>
+                </tr>
+                <tr>
+                    <td>Perception Trained</td>
+                    <td>{{stats['Perception Trained']}}</td>
+                </tr>
+                <tr>
+                    <td>Perception Misc</td>
+                    <td>{{stats['Perception Misc']}}</td>
+                </tr>
+                <tr>
+                    <td>Religion</td>
+                    <td>{{stats['Religion']}}</td>
+                </tr>
+                <tr>
+                    <td>Religion Trained</td>
+                    <td>{{stats['Religion Trained']}}</td>
+                </tr>
+                <tr>
+                    <td>Religion Misc</td>
+                    <td>{{stats['Religion Misc']}}</td>
+                </tr>
+                <tr>
+                    <td>Stealth</td>
+                    <td>{{stats['Stealth']}}</td>
+                </tr>
+                <tr>
+                    <td>Stealth Trained</td>
+                    <td>{{stats['Stealth Trained']}}</td>
+                </tr>
+                <tr>
+                    <td>Stealth Misc</td>
+                    <td>{{stats['Stealth Misc']}}</td>
+                </tr>
+                <tr>
+                    <td>Streetwise</td>
+                    <td>{{stats['Streetwise']}}</td>
+                </tr>
+                <tr>
+                    <td>Streetwise Trained</td>
+                    <td>{{stats['Streetwise Trained']}}</td>
+                </tr>
+                <tr>
+                    <td>Streetwise Misc</td>
+                    <td>{{stats['Streetwise Misc']}}</td>
+                </tr>
+                <tr>
+                    <td>Thievery</td>
+                    <td>{{stats['Thievery']}}</td>
+                </tr>
+                <tr>
+                    <td>Thievery Trained</td>
+                    <td>{{stats['Thievery Trained']}}</td>
+                </tr>
+                <tr>
+                    <td>Thievery Misc</td>
+                    <td>{{stats['Thievery Misc']}}</td>
+                </tr>
+                <tr>
+                    <td>Athletics</td>
+                    <td>{{stats['Athletics']}}</td>
+                </tr>
+                <tr>
+                    <td>Athletics Trained</td>
+                    <td>{{stats['Athletics Trained']}}</td>
+                </tr>
+                <tr>
+                    <td>Athletics Misc</td>
+                    <td>{{stats['Athletics Misc']}}</td>
+                </tr>
+                <tr>
+                    <td>Passive Perception</td>
+                    <td>{{stats['Passive Perception']}}</td>
+                </tr>
+                <tr>
+                    <td>Passive Insight</td>
+                    <td>{{stats['Passive Insight']}}</td>
+                </tr>
+                <tr>
+                    <td>Speed</td>
+                    <td>{{stats['Speed']}}</td>
+                </tr>
+                <tr>
+                    <td>Average Height</td>
+                    <td>{{stats['Average Height']}}</td>
+                </tr>
+                <tr>
+                    <td>Average Weight</td>
+                    <td>{{stats['Average Weight']}}</td>
+                </tr>
+                <tr>
+                    <td>Size</td>
+                    <td>{{stats['Size']}}</td>
+                </tr>
+                <tr>
+                    <td>Language Count</td>
+                    <td>{{stats['Language Count']}}</td>
+                </tr>
+                <tr>
+                    <td>_CLASSNAME</td>
+                    <td>{{stats['_CLASSNAME']}}</td>
+                </tr>
+                <tr>
+                    <td>_PER-LEVEL-HPS</td>
+                    <td>{{stats['_PER-LEVEL-HPS']}}</td>
+                </tr>
+                <tr>
+                    <td>Default Paragon Path</td>
+                    <td>{{stats['Default Paragon Path']}}</td>
+                </tr>
+                <tr>
+                    <td>Default Epic Destiny</td>
+                    <td>{{stats['Default Epic Destiny']}}</td>
+                </tr>
+                <tr>
+                    <td>Crossbow Expertise</td>
+                    <td>{{stats['Crossbow Expertise']}}</td>
+                </tr>
+                <tr>
+                    <td>weapon,crossbow group:attack</td>
+                    <td>{{stats['weapon,crossbow group:attack']}}</td>
+                </tr>
+                <tr>
+                    <td>Weapon Talent</td>
+                    <td>{{stats['Weapon Talent']}}</td>
+                </tr>
+                <tr>
+                    <td>weapon:attack</td>
+                    <td>{{stats['weapon:attack']}}</td>
+                </tr>
+                <tr>
+                    <td>Weapon Focus (Crossbow)</td>
+                    <td>{{stats['Weapon Focus (Crossbow)']}}</td>
+                </tr>
+                <tr>
+                    <td>Crossbow group,weapon:damage</td>
+                    <td>{{stats['Crossbow group,weapon:damage']}}</td>
+                </tr>
+                <tr>
+                    <td>ID_FMP_POWER_13588_ADDITIONAL_USES</td>
+                    <td>{{stats['ID_FMP_POWER_13588_ADDITIONAL_USES']}}</td>
+                </tr>
+                <tr>
+                    <td>Weapon Mastery</td>
+                    <td>{{stats['Weapon Mastery']}}</td>
+                </tr>
+                <tr>
+                    <td>weapon:damage</td>
+                    <td>{{stats['weapon:damage']}}</td>
+                </tr>
+                <tr>
+                    <td>ranged:damage</td>
+                    <td>{{stats['ranged:damage']}}</td>
+                </tr>
+                <tr>
+                    <td>Action Point</td>
+                    <td>{{stats['Action Point']}}</td>
+                </tr>
+                <tr>
+                    <td>Superior Will</td>
+                    <td>{{stats['Superior Will']}}</td>
+                </tr>
+                <tr>
+                    <td>Superior Fortitude fort</td>
+                    <td>{{stats['Superior Fortitude fort']}}</td>
+                </tr>
+                <tr>
+                    <td>Superior Fortitude resist</td>
+                    <td>{{stats['Superior Fortitude resist']}}</td>
+                </tr>
+                <tr>
+                    <td>resist:ongoing</td>
+                    <td>{{stats['resist:ongoing']}}</td>
+                </tr>
+                <tr>
+                    <td>Superior Reflexes</td>
+                    <td>{{stats['Superior Reflexes']}}</td>
+                </tr>
+                <tr>
+                    <td>Death Saving Throws</td>
+                    <td>{{stats['Death Saving Throws']}}</td>
+                </tr>
+                <tr>
+                    <td>Healing Surge Value</td>
+                    <td>{{stats['Healing Surge Value']}}</td>
+                </tr>
+                <tr>
+                    <td>Weight</td>
+                    <td>{{stats['Weight']}}</td>
+                </tr>
+                <tr>
+                    <td>Weight Discount</td>
+                    <td>{{stats['Weight Discount']}}</td>
+                </tr>
+                <tr>
+                    <td>resist:psychic</td>
+                    <td>{{stats['resist:psychic']}}</td>
+                </tr>
+                <tr>
+                    <td>ID_FMP_ITEM_SET_4 Set Count</td>
+                    <td>{{stats['ID_FMP_ITEM_SET_4 Set Count']}}</td>
+                </tr>
+                <tr>
+                    <td>Fly Speed</td>
+                    <td>{{stats['Fly Speed']}}</td>
+                </tr>
+                <tr>
+                    <td>bow group:damage</td>
+                    <td>{{stats['bow group:damage']}}</td>
+                </tr>
+                <tr>
+                    <td>crossbow group:damage</td>
+                    <td>{{stats['crossbow group:damage']}}</td>
+                </tr>
+                <tr>
+                    <td>Saving Throws</td>
+                    <td>{{stats['Saving Throws']}}</td>
+                </tr>
+                <tr>
+                    <td>attack rolls</td>
+                    <td>{{stats['attack rolls']}}</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</div>
